@@ -1,10 +1,15 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label '192.168.0.170'
+    }
+
+  }
   stages {
     stage('pull') {
       agent {
         node {
-          label '172.168.0.170'
+          label '192.168.0.170'
         }
 
       }
