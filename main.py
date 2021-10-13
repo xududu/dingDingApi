@@ -46,6 +46,7 @@ class ConsoleLogParameter(BaseModel):
     line: Optional[str] = '100'
 
 
+# 发布验证接口
 @app.post('/confirm')
 async def publish_confirm(confirm_parameter: PublishConfirmParameter):
     confirm_parameter_dict = confirm_parameter.dict()
